@@ -13,12 +13,20 @@ const app = express();
 const port = 3000;
 
 // Connect to PostgreSQL database.
+// const db = new pg.Client({
+//   user: process.env.USER,
+//   host: process.env.HOST,
+//   database: process.env.DATABASE,
+//   password: process.env.PASSWORD,
+//   port: process.env.PORT,
+// });
+
+// Connect to Render PostgreSQL server.
 const db = new pg.Client({
-  user: process.env.USER,
-  host: process.env.HOST,
-  database: process.env.DATABASE,
-  password: process.env.PASSWORD,
-  port: process.env.PORT,
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 db.connect();
 
