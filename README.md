@@ -9,3 +9,5 @@ It shares the user's secrets without the user's name. People can read all the se
 3. Create a project at [Google credentials ](https://console.cloud.google. com/projectselector2/auth/overview?inv=1&invt=AbwqGg&supportedpurview=project) and get Google's client ID, client secret and callback URL.
 4. Input the credentials in the .env file.
 5. Run the app.js file.
+
+**Click on "https://mumble-8z5o.onrender.com" to see deployed project.**
