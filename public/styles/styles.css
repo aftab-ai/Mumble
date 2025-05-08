@@ -1,5 +1,7 @@
+/* Base styles */
 body {
   background-color: #e8ecef;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .centered {
@@ -10,25 +12,96 @@ body {
 .secret-text {
   text-align: center;
   font-size: 2rem;
-  color: #fff;
-  background-color: #000;
+  color: #f0f0f0;
+  background-color: #1e1e2f;
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin: 10px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Button styling */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Default layout: not fixed */
 .fixed-buttons {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
+  justify-content: center;
   gap: 10px;
-  z-index: 1000;
+  margin: 40px auto 20px;
   padding: 10px 15px;
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
   backdrop-filter: blur(8px);
+  max-width: fit-content;
+}
+
+/* Only fix position when 'fixed' class is present and screen is tall enough */
+@media (min-height: 700px) {
+  .fixed-buttons.fixed {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
 }
 
 .fixed-buttons .btn {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Form input focus styling */
+.form-control:focus {
+  border-color: #495057;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.15);
+}
+
+/* Social buttons */
+.btn-google {
+  background-color: #db4437;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-google:hover {
+  background-color: #c23321;
+  color: white;
+}
+
+/* Card spacing */
+.card {
+  margin-bottom: 20px;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .centered {
+    padding-top: 100px;
+  }
+
+  .secret-text {
+    font-size: 1.3rem;
+    padding: 10px;
+  }
+
+  .fixed-buttons {
+    flex-direction: column;
+    bottom: 10px;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .btn-lg {
+    font-size: 1.2rem;
+    padding: 12px;
+  }
 }
