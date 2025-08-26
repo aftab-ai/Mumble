@@ -10,4 +10,4 @@ It shares the user's secrets without the user's name. People can read all the se
 4. Input the credentials in the .env file.
 5. Run the app.js file.
 
-**Click on "https://mumble-8z5o.onrender.com" to see deployed project.**
+**Click on "https://mumble-yh2i.onrender.com" to see deployed project.**
